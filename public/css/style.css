@@ -1,0 +1,198 @@
+html,
+body {
+    min-height: 100vh;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: rgb(20,16,16); 
+    display: flex;
+    flex-direction: column;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#intro {
+    background: none;
+}
+.intro-text {
+    font-weight: 600;
+}
+
+.lead {
+    font-size: 18px;
+}
+.alert {
+    border-radius: 28px;
+    background-color: rgb(6, 255, 243);
+    border-color: rgb(255, 23, 7);
+    color: rgb(13, 13, 14);
+}
+.outline-badge {    
+    font-weight: normal;
+    font-size: small;
+    background: rgb(20,16,16); ;
+    border: 1.3px solid rgb(226, 10, 10);   
+} 
+.no-btn {
+    color: rgb(230, 14, 14);
+    border: none;
+}
+.no-btn:hover {
+    color: rgba(255, 53, 53, 0.9);
+}
+.outline-btn {
+    color: rgb(241, 29, 29);
+    border: 2px solid rgb(228, 26, 26);
+}
+.outline-btn:hover {
+    color: white;
+    background-color: rgb(219, 14, 14);
+    border: 2px solid rgb(233, 10, 10);   
+}
+.btn-login {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: 2px solid rgb(225, 250, 3);
+}
+
+.btn-login:hover {
+    background-color: rgb(20,16,16);
+}
+.btn-sign-up{
+    background-color: rgb(20,16,16);
+    color: #ffff;
+    border: 2px solid rgb(70, 245, 17);
+}
+
+.btn-sign-up:hover {
+    color: white;
+}
+
+.btn-logout {
+    background-color: rgb(20,16,16);
+}
+.cap-btn {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-link:hover,
+footer i:hover,
+footer a:hover {
+    color: rgb(5, 255, 242);
+}
+.dropdown-item {
+    color: rgb(245, 245, 245);   
+}
+.dropdown-menu {
+    background-color: rgb(20,16,16);
+    border-radius: 24px;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgb(235, 31, 4);
+    border-radius: 20px;
+    color: white;
+}
+#dropdownMenuLink.show {
+    background-color: rgb(221, 18, 18);
+    border: 2px solid rgb(235, 12, 12);
+}
+.accent-1 {
+    color: rgb(240, 22, 15);
+}
+.main{
+  margin-top: 10rem;  
+}
+.bg-dark-1 {
+    background-color: rgb(20,16,16);
+}
+.nav-link {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+.btn-nav{
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+input {
+    border-radius: 20px;
+}
+.card-img-top{
+    width: 100%;
+    height: auto;
+}
+.btn-liked{
+    color: rgb(240, 26, 26);
+}
+.like-count {
+    font-family: sans-serif;
+    font-weight:lighter;
+    font-size: medium;
+    color: white;
+}
+.btn-liked:hover{
+    color: rgba(231, 7, 7, 0.5);
+}
+.btn-bookmarked{
+    background: #ffff;
+}
+hr {
+    color: rgb(248, 10, 10);
+}
+.btn-primary {
+    background-color: rgb(231, 12, 12) !important;
+    border: 2px solid rgb(219, 11, 11) !important;
+}
+.btn-primary:hover {
+    background-color: rgb(233, 13, 13) !important;
+    border: 2px solid rgb(228, 15, 15) !important;
+}
+.btn.primary:active {
+    background-color: rgb(250, 17, 17) !important;
+    border: 2px solid rgb(231, 6, 6) !important;
+}
+footer {
+    background-color: rgb(238, 13, 13);
+    color: white;
+}
+footer i,
+footer a {
+    color: black;
+}
+footer.border-top {
+    border-width: 16px !important;
+    border-color: rgb(223, 24, 24) !important ;
+}
+/* footer p,
+footer ul {
+    margin-bottom: 0px !important;
+    padding-bottom: 8px;
+} */
+.logo a {
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+video {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+  }
+.get-started-btn {
+  background-color: rgb(240, 15, 15);
+  border: 2px solid rgb(233, 6, 6);
+  color: white;
+}
+.get-started-btn:hover {
+  background-color: rgb(236, 11, 11);
+  border: 2px solid rgb(240, 15, 15);
+  color: white;
+}
