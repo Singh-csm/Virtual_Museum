@@ -1,0 +1,31 @@
+<%- include('partials/header-logged-in') -%>
+
+<div class="container card-container main">
+  <h1>My Saved Walks</h1>
+  <% console.log(posts[0]) %> 
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% for(var i=0; i<posts.length; i++) {%>
+      <%if(posts[i].bookmarks.includes(user.id)) {%>
+    <div class="col">
+      <div class="card bg-dark-1 text-white h-100">
+        <a href="/post/<%= posts[i]._id%>"><img src="<%= posts[i].image%>" class="card-img-top" alt="..."></a>
+       
+        <div class="card-body">
+          <h5 class="card-title"><%= posts[i].title %></h5>
+          <p class="card-text"><%= posts[i].subtitle %></p>
+          <a href="/post/<%= posts[i]._id%>" class="btn btn-primary rounded-pill shadow-none btn-lg">View Walk</a>
+          <!-- <a href="/post/<%= posts[i]._id%>" class="btn btn-primary">Edit</a> -->
+        </div>
+        <div class="card-footer">
+          <span class="badge rounded-pill outline-badge accent-1 m-1"><%= posts[i].state%></span>
+          <span class="badge rounded-pill outline-badge accent-1 m-1"><%= posts[i].speaking%></span>
+          <span class="badge rounded-pill outline-badge accent-1 m-1"><%= posts[i].mainTerrain%></span>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <% } %>
+  </div>
+</div>
+
+<%- include('partials/footer') -%>

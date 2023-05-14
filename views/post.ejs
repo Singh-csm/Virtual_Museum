@@ -1,0 +1,72 @@
+<%- include('partials/header-logged-in') -%>
+<div class="container card-container main">
+
+    <div class="row">
+      <h1 class="display-4"><%= post.title %></h1>
+      <p class="accent-1">YouTube Guide: <%= post.youTubeUser %></p>
+      <div class="col-md-6">
+        <img src="<%= post.image%>" class="img-fluid" alt="Responsive image">
+
+        <div class="row row-cols-3">
+          <form
+            class="col d-flex"
+            action="/post/likePost/<%= post.id %>?_method=PUT"
+            method="POST"
+          >
+
+            <button type="submit" class=" <%if(post.likes.includes(user.id)){ %> bi bi-heart-fill<%} else { %> bi bi-heart <% }%> btn btn-lg no-btn shadow-none " ><span class="px-1 like-count"> <%= post.likes.length - 1 %></span>
+            </button>
+          </form>
+                  
+          <form
+            class="col d-flex justify-content-center"
+            action="/post/bookmarkPost/<%= post.id %>?_method=PUT"
+            method="POST"
+          >
+            <button class="<%if(post.bookmarks.includes(user.id)){ %> bi bi-bookmark-star-fill<%} else { %> bi bi-bookmark-star <% }%>
+            btn btn-lg no-btn shadow-none" type="submit"></button>
+          </form>
+
+
+          <%if(post.user == user.id){ %>
+          <form
+            class="col d-flex justify-content-end"
+            action="/post/deletePost/<%= post.id %>?_method=DELETE"
+            method="POST"
+            
+          >
+            <button class="btn btn-lg no-btn shadow-none bi bi-trash-fill" type="submit"></button>
+          </form>
+          <%}%>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <!-- <h3 class="display-4">Walk</h3> -->
+        <p class="accent-1">Added By: <%= post.createdBy %> on <%= post.createdAt %></p> 
+
+        <hr class="style1">
+        <p><%= post.subtitle %></p>
+
+        <hr class="style1">
+        <p class="p-1"><%= post.state %> </p>
+
+        <hr class="style1">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="<%= post.videoUrlFullScreen %>" target="_blank" type="button" class="btn btn-primary rounded-pill shadow-none btn-lg">
+            Watch Now
+          </a>
+          
+        </div>
+      
+        <hr class="style1">
+        
+        <div class="">
+          <span class="badge rounded-pill outline-badge accent-1 m-1"><%= post.mainTerrain%></span>
+          <span class="badge rounded-pill outline-badge accent-1 m-1"><%= post.speaking%></span> 
+          <span class="badge rounded-pill outline-badge accent-1 m-1"><%= post.state%></span>
+        </div>
+      </div>
+    </div>
+</div>
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,42 @@
+<%- include('partials/header') -%>
+
+<main class="container card-container main">
+  <div class="row justify-content-center">
+    <section class="col-6 mt-5">
+      <h1>Log in with email</h1>
+      <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+      <div class="alert alert-danger 
+      bi bi-exclamation-circle"> <%= el.msg %></div>
+      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+      messages.info.forEach( el => { %>
+      <div class="alert alert-info"><%= el.msg %></div>
+      <% }) %> <% } %>
+      <form action="/login" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input 
+            type="email"
+            class="form-control rounded-pill"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control rounded-pill"
+            id="exampleInputPassword1"
+            name="password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary rounded-pill shadow-none btn-lg">Log In</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+<%- include('partials/footer') -%>
