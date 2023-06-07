@@ -12,9 +12,9 @@ https://github.com/Singh-csm/Virtual_Museum/assets/118621709/d640f9a4-8070-4eb9-
 Allows users to log in, set up a profile, bookmark and save their favorite arts, like/unlike their favorite art, and upload their own art. Imagined abt visiting museum and built for anyone anywhere that wants to get away to the vast and beautiful outdoors but isn't able to at the moment. A chance to relax, unwind, explore, and recharge with Historical seen. 
 
 ### Visit the deployed site:
-https://example.com/<br>
+[Virtual-Guide-App](https://virtual-app.onrender.com/signup)<br>
 
-### Demo user:
+### user:
 email: softwaredev1234@gmail.com<br>
 password: softwaredev1234
 
